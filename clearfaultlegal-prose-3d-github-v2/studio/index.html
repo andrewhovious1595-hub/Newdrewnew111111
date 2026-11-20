@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>2D Incident Reconstruction Studio | Clear Fault Legal</title>
+  <meta name="description" content="Build court-ready 2D incident scene exhibits in your browser with routes, editable markers, chronologies, and classified evidence registers.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clearfaultlegal.com/studio/index.html">
+  <meta property="og:site_name" content="Clear Fault Legal">
+  <meta property="og:title" content="2D Incident Reconstruction Studio | Clear Fault Legal">
+  <meta property="og:description" content="Build court-ready 2D incident scene exhibits in your browser with routes, editable markers, chronologies, and classified evidence registers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clearfaultlegal.com/studio/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="2D Incident Reconstruction Studio | Clear Fault Legal">
+  <meta name="twitter:description" content="Build court-ready 2D incident scene exhibits in your browser with routes, editable markers, chronologies, and classified evidence registers.">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/studio.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "2D Incident Reconstruction Studio",
+  "url": "https://clearfaultlegal.com/studio/index.html",
+  "operatingSystem": "Web Browser"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="urgent-bar"><strong>Going Pro Se?</strong> Access verified Federal &amp; State court forms plus 7 browser-based drafting &amp; exhibit tools — zero account walls, zero cloud uploads. <a href="../forms/index.html">Open Court Forms Database &rarr;</a></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <div class="logo" aria-hidden="true">CF</div>
+        <div>
+          <span class="brand-title">Clear Fault Legal</span>
+          <span class="brand-sub">Pro Se Litigation Arsenal · Official Court Forms & Drafting Tools</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primaryNav">Menu</button>
+      <nav id="primaryNav" class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../forms/index.html">Court Forms DB</a>
+        <a href="../tools/index.html" aria-current="page">7 Pro Se Tools</a>
+        <a href="../filing/civil-lawsuit.html">Civil Suits</a>
+        <a href="../filing/probate.html">Probate</a>
+        <a href="../filing/bankruptcy.html">Bankruptcy</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a class="nav-cta" href="../tools/pleading-drafter/index.html">Start Drafting Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="studio-toolbar">
+      <div class="studio-toolbar-inner">
+        <div class="studio-title-bar">
+          <h1>2D Incident Reconstruction Studio</h1>
+          <span class="status-pill">Pro Se Arsenal Tool · Client-Side Workspace</span>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="btn" id="newProject">New</button>
+          <button type="button" class="btn" id="importBtn">Open project</button>
+          <button type="button" class="btn primary" id="saveBtn">Save project</button>
+          <input type="file" id="projectFile" accept=".json,application/json" class="hidden">
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <nav class="tool-strip" aria-label="Switch Pro Se litigation tool"><a href="../forms/index.html">Court Forms DB</a><a href="../tools/pleading-drafter/index.html">1 · Pleading Drafter</a><a href="../tools/demand-package/index.html">2 · Demand Package</a><a href="../studio/index.html" aria-current="page">3 · 2D Scene Studio</a><a href="../tools/3d-scene-stager/index.html">4 · 3D Animation Studio</a><a href="../tools/document-indexer/index.html">5 · Bates Indexer</a><a href="../tools/chronology-builder/index.html">6 · Chronology</a><a href="../tools/case-strategy-planner/index.html">7 · Proof Planner</a></nav>
+
+      <div class="tabs" role="tablist" aria-label="Exhibit creation steps">
+        <button type="button" class="tab active" role="tab" aria-selected="true" aria-controls="tab-scene" data-tab="scene">1 · Scene</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-routes" data-tab="routes">2 · Routes</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-markers" data-tab="markers">3 · Markers</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-timeline" data-tab="timeline">4 · Timeline</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-evidence" data-tab="evidence">5 · Evidence</button>
+        <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-export" data-tab="export">6 · Export</button>
+      </div>
+
+      <div class="workspace">
+        <section aria-label="Exhibit editor and scene canvas">
+          <div class="panel tab-panel" id="tab-scene" role="tabpanel">
+            <h2>Project and scene</h2>
+            <div class="grid2">
+              <div class="field"><label for="projectTitle">Project title</label><input id="projectTitle" value="Untitled incident reconstruction"></div>
+              <div class="field"><label for="incidentType">Incident type</label><input id="incidentType" placeholder="e.g. vehicle collision, premises incident"></div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="caseId">Case / reference ID</label><input id="caseId" placeholder="Optional"></div>
+              <div class="field"><label for="preparedBy">Prepared by</label><input id="preparedBy" placeholder="Name or organization"></div>
+            </div>
+            <div class="field"><label for="sceneNotes">Scene notes</label><textarea id="sceneNotes" placeholder="Describe the scene and the scope of this visual exhibit."></textarea></div>
+            <div class="grid2">
+              <div class="field"><label for="sceneImage">Upload scene image, map, plan, or photograph</label><input type="file" id="sceneImage" accept="image/*"></div>
+              <div class="field" style="align-content:end"><button type="button" class="btn" id="clearImage">Remove background image</button></div>
+            </div>
+            <div class="small">Use a source image that you are authorized to use. Uploaded imagery stays in your browser session memory until you export a project file.</div>
+          </div>
+
+          <div class="panel tab-panel hidden" id="tab-routes" role="tabpanel">
+            <h2>Movement routes</h2>
+            <p class="muted small">Create any number of routes for people, vehicles, or objects. Add or select a route, enable plotting mode, then click or tap the scene to place numbered waypoints in sequence.</p>
+            <div class="grid2">
+              <div class="field"><label for="routeName">Route name</label><input id="routeName" placeholder="e.g. Vehicle A"></div>
+              <div class="field"><label for="routeColor">Route color</label><input id="routeColor" type="color" value="#58b8ff"></div>
+            </div>
+            <div class="field"><label for="routeDescription">Entity / description</label><input id="routeDescription" placeholder="Optional description"></div>
+            <div class="btn-row">
+              <button type="button" class="btn primary" id="addRoute">Add route &amp; start plotting</button>
+            </div>
+            <div class="field" style="margin-top:15px"><label for="activeRoute">Active route</label><select id="activeRoute"></select></div>
+            <div class="btn-row">
+              <button type="button" class="btn primary" id="routeMode" disabled>Plot points on scene</button>
+              <button type="button" class="btn" id="undoPoint" disabled>Undo last route point</button>
+            </div>
+          </div>
+
+          <div class="panel tab-panel hidden" id="tab-markers" role="tabpanel">
+            <h2>Scene markers and annotations</h2>
+            <p class="muted small">Choose a marker type, activate placement mode, and click or tap the scene. Use the Edit button in the marker list to revise labels or source notes at any time.</p>
+            <div class="grid2">
+              <div class="field">
+                <label for="markerType">Marker type</label>
+                <select id="markerType">
+                  <option value="event">Event / occurrence</option>
+                  <option value="contact">Contact / interaction point</option>
+                  <option value="injury">Reported injury area</option>
+                  <option value="reference">Reference / evidence point</option>
+                  <option value="interest">Area of interest</option>
+                </select>
+              </div>
+              <div class="field"><label for="markerLabel">Marker label</label><input id="markerLabel" placeholder="e.g. Point A"></div>
+            </div>
+            <div class="field"><label for="markerDescription">Description / source note</label><input id="markerDescription" placeholder="What does this marker represent?"></div>
+            <button type="button" class="btn primary" id="markerMode">Place marker on scene</button>
+            <div class="notice" style="margin-top:13px">Injury-area symbols are illustrative annotations only. They do not establish a diagnosis, injury boundary, mechanism, or medical conclusion.</div>
+          </div>
+
+          <div class="panel tab-panel hidden" id="tab-timeline" role="tabpanel">
+            <h2>Event chronology</h2>
+            <div class="grid2">
+              <div class="field"><label for="eventTime">Time / sequence</label><input id="eventTime" placeholder="e.g. 00:12 or Step 2"></div>
+              <div class="field"><label for="eventTitle">Event title</label><input id="eventTitle" placeholder="Short event label"></div>
+            </div>
+            <div class="field"><label for="eventDescription">Event description</label><textarea id="eventDescription" placeholder="Describe what the source material documents."></textarea></div>
+            <button type="button" class="btn primary" id="addEvent">Add timeline event</button>
+            <div id="timelineList" class="list" style="margin-top:13px"></div>
+          </div>
+
+          <div class="panel tab-panel hidden" id="tab-evidence" role="tabpanel">
+            <h2>Evidence register</h2>
+            <div class="grid2">
+              <div class="field"><label for="evidenceId">Evidence ID</label><input id="evidenceId" placeholder="E-01"></div>
+              <div class="field">
+                <label for="evidenceType">Evidence type</label>
+                <select id="evidenceType">
+                  <option>Photograph</option>
+                  <option>Video</option>
+                  <option>Diagram / plan</option>
+                  <option>Measurement</option>
+                  <option>Witness statement</option>
+                  <option>Report</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="evidenceDescription">Description / source</label><input id="evidenceDescription" placeholder="Source, date, page, file name"></div>
+            <div class="field">
+              <label for="evidenceClass">Classification</label>
+              <select id="evidenceClass">
+                <option>Documented fact</option>
+                <option>Expert interpretation</option>
+                <option>Assumption</option>
+                <option>Unresolved / disputed</option>
+              </select>
+            </div>
+            <button type="button" class="btn primary" id="addEvidence">Add evidence item</button>
+            <div id="evidenceList" class="list" style="margin-top:13px"></div>
+          </div>
+
+          <div class="panel tab-panel hidden" id="tab-export" role="tabpanel">
+            <h2>Review and export</h2>
+            <p class="muted small">Review your scene exhibit, routes, markers, chronology, and evidence register before exporting. All downloads route through the exhibit export checkpoint.</p>
+            <div class="grid2">
+              <button type="button" class="btn primary" id="exportPng">Export scene as PNG</button>
+              <button type="button" class="btn" id="printBtn">Print exhibit &amp; register</button>
+              <button type="button" class="btn" id="exportJson">Download project JSON</button>
+              <button type="button" class="btn" id="exportReport">Download summary CSV</button>
+            </div>
+            <div class="notice" style="margin-top:15px">This application creates visual exhibits from user-entered information. It does not independently verify evidence, calculate collision dynamics, determine causation, or provide expert opinions. Have technical conclusions reviewed by appropriately qualified professionals.</div>
+          </div>
+
+          <div class="panel">
+            <div class="canvas-wrap">
+              <div class="canvas-top">
+                <div>
+                  <strong>Scene exhibit</strong>
+                  <span class="small" id="modeHint" style="margin-left:8px">View mode — select a workflow action to add route points or markers</span>
+                </div>
+                <div class="canvas-controls">
+                  <button type="button" class="btn mini" id="zoomOut" aria-label="Zoom out">-</button>
+                  <span class="small" id="zoomReadout">100%</span>
+                  <button type="button" class="btn mini" id="zoomIn" aria-label="Zoom in">+</button>
+                  <button type="button" class="btn mini" id="fitView">Fit scene</button>
+                </div>
+              </div>
+              <div class="canvas-viewport">
+                <canvas id="sceneCanvas" width="1400" height="800" aria-label="Incident scene exhibit canvas"></canvas>
+              </div>
+              <div class="canvas-hint">
+                <span>Tap or click the scene when Route Plotting or Marker Placement is active.</span>
+                <span>Press <kbd>Esc</kbd> to exit placement mode.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side" aria-label="Exhibit layers and integrity guidance">
+          <div class="side-grid">
+            <div class="panel">
+              <h3>Routes <span class="muted" id="routeCount">0</span></h3>
+              <div id="routeList" class="list"><div class="empty">No routes yet</div></div>
+            </div>
+            <div class="panel">
+              <h3>Markers <span class="muted" id="markerCount">0</span></h3>
+              <div id="markerList" class="list"><div class="empty">No markers yet</div></div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Need 3D Perspectives or a Demand Packet?</h3>
+            <p class="small">Export your PNG here, then animate your scene in the <a href="../tools/3d-scene-stager/index.html">Simple 3D Animation Studio</a> or include this exhibit inside the <a href="../tools/demand-package/index.html">Demand Package Assembler</a>.</p>
+            <div class="notice">Do not present illustrative geometry or user-entered labels as independently validated forensic findings.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom:12px">
+            <div class="logo" aria-hidden="true">CF</div>
+            <div>
+              <span class="brand-title">Clear Fault Legal</span>
+              <span class="brand-sub">Pro Se Litigation Tools &amp; Court Forms</span>
+            </div>
+          </div>
+          <p style="margin:0;max-width:36ch">Everything a self-represented litigant needs to pull verified official court forms, draft court-captioned pleadings and demand letters, organize Bates-stamped exhibits, and build 2D/3D scene visuals—privately in the browser.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pro Se Filing Tracks</h4>
+          <ul>
+            <li><a href="../forms/index.html">Official Court Forms Database</a></li>
+            <li><a href="../filing/civil-lawsuit.html">File a Civil Lawsuit Pro Se</a></li>
+            <li><a href="../filing/demand-letters.html">Draft a Settlement Demand Letter</a></li>
+            <li><a href="../filing/probate.html">File Probate Pro Se</a></li>
+            <li><a href="../filing/bankruptcy.html">File Chapter 7 / 13 Bankruptcy</a></li>
+            <li><a href="../filing/small-claims.html">File Small Claims Court</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>7 Interactive Tools</h4>
+          <ul>
+            <li><a href="../tools/pleading-drafter/index.html">Pro Se Pleading &amp; Motion Drafter</a></li>
+            <li><a href="../tools/demand-package/index.html">Demand Package Assembler</a></li>
+            <li><a href="../studio/index.html">2D Incident Reconstruction Studio</a></li>
+            <li><a href="../tools/3d-scene-stager/index.html">Simple 3D Animation Studio</a></li>
+            <li><a href="../tools/document-indexer/index.html">Document &amp; Bates Indexer</a></li>
+            <li><a href="../tools/chronology-builder/index.html">Case Chronology</a> · <a href="../tools/case-strategy-planner/index.html">Proof Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Official Judiciary Portals</h4>
+          <ul>
+            <li><a href="https://www.uscourts.gov/forms-rules/forms" target="_blank" rel="noopener noreferrer">U.S. Courts National Forms &nearr;</a></li>
+            <li><a href="https://www.uscourts.gov/forms/bankruptcy-forms" target="_blank" rel="noopener noreferrer">U.S. Bankruptcy Forms &nearr;</a></li>
+            <li><a href="https://courts.ca.gov/forms-rules/court-forms" target="_blank" rel="noopener noreferrer">California Judicial Council Forms &nearr;</a></li>
+            <li><a href="../faq/index.html">Pro Se FAQ</a> · <a href="../sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Clear Fault Legal. Self-service pro se litigation tools &amp; official court form directory — not a law firm and not legal advice.</span>
+        <span>All uploaded case files and draft filings remain strictly inside local browser memory until exported.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/export-gate.js" defer></script>
+  <script src="../assets/js/studio.js" defer></script>
+</body>
+</html>

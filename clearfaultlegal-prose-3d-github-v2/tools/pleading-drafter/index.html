@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Pro Se Pleading, Complaint & Motion Drafter | Clear Fault Legal</title>
+  <meta name="description" content="Draft court-captioned Pro Se Civil Complaints, Answers, Motions, Declarations, Proofs of Service, Probate summaries, and Bankruptcy prep sheets. Export to Word (.doc) or PDF.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clearfaultlegal.com/tools/pleading-drafter/index.html">
+  <meta property="og:site_name" content="Clear Fault Legal">
+  <meta property="og:title" content="Pro Se Pleading, Complaint & Motion Drafter | Clear Fault Legal">
+  <meta property="og:description" content="Draft court-captioned Pro Se Civil Complaints, Answers, Motions, Declarations, Proofs of Service, Probate summaries, and Bankruptcy prep sheets. Export to Word (.doc) or PDF.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clearfaultlegal.com/tools/pleading-drafter/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pro Se Pleading, Complaint & Motion Drafter | Clear Fault Legal">
+  <meta name="twitter:description" content="Draft court-captioned Pro Se Civil Complaints, Answers, Motions, Declarations, Proofs of Service, Probate summaries, and Bankruptcy prep sheets. Export to Word (.doc) or PDF.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../../assets/css/studio.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pro Se Pleading & Filing Drafter",
+  "url": "https://clearfaultlegal.com/tools/pleading-drafter/index.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="urgent-bar"><strong>Going Pro Se?</strong> Access verified Federal &amp; State court forms plus 7 browser-based drafting &amp; exhibit tools — zero account walls, zero cloud uploads. <a href="../../forms/index.html">Open Court Forms Database &rarr;</a></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">
+        <div class="logo" aria-hidden="true">CF</div>
+        <div>
+          <span class="brand-title">Clear Fault Legal</span>
+          <span class="brand-sub">Pro Se Litigation Arsenal · Official Court Forms & Drafting Tools</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primaryNav">Menu</button>
+      <nav id="primaryNav" class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../forms/index.html">Court Forms DB</a>
+        <a href="../../tools/index.html">7 Pro Se Tools</a>
+        <a href="../../filing/civil-lawsuit.html">Civil Suits</a>
+        <a href="../../filing/probate.html">Probate</a>
+        <a href="../../filing/bankruptcy.html">Bankruptcy</a>
+        <a href="../../faq/index.html">FAQ</a>
+        <a class="nav-cta" href="../../tools/pleading-drafter/index.html" aria-current="page">Start Drafting Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="studio-toolbar">
+      <div class="studio-toolbar-inner">
+        <div class="studio-title-bar">
+          <h1>Pro Se Pleading, Motion &amp; Filing Drafter</h1>
+          <span class="status-pill">Tool 1 of 7 · Court-Captioned .DOC &amp; PDF Builder</span>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="btn" id="newPleadBtn">New</button>
+          <button type="button" class="btn" id="openPleadBtn">Open JSON</button>
+          <button type="button" class="btn" id="exportPleadTxt">Download TXT</button>
+          <button type="button" class="btn" id="exportPleadDoc">Download Word (.doc)</button>
+          <button type="button" class="btn" id="exportPleadJson">Save JSON</button>
+          <button type="button" class="btn primary" id="printPleadBtn">Print / PDF Filing</button>
+          <input type="file" id="openPleadFile" accept=".json,application/json" class="hidden">
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <nav class="tool-strip" aria-label="Switch Pro Se litigation tool"><a href="../../forms/index.html">Court Forms DB</a><a href="../../tools/pleading-drafter/index.html" aria-current="page">1 · Pleading Drafter</a><a href="../../tools/demand-package/index.html">2 · Demand Package</a><a href="../../studio/index.html">3 · 2D Scene Studio</a><a href="../../tools/3d-scene-stager/index.html">4 · 3D Animation Studio</a><a href="../../tools/document-indexer/index.html">5 · Bates Indexer</a><a href="../../tools/chronology-builder/index.html">6 · Chronology</a><a href="../../tools/case-strategy-planner/index.html">7 · Proof Planner</a></nav>
+
+      <div class="workspace">
+        <section>
+          <div class="panel">
+            <h2>1 · Filing Type &amp; Court Caption</h2>
+            <div class="grid2">
+              <div class="field">
+                <label for="template">Select pleading / filing template</label>
+                <select id="template">
+                  <option value="complaint">Civil Lawsuit Complaint (Pro Se)</option>
+                  <option value="answer">Defendant's Answer &amp; Affirmative Defenses</option>
+                  <option value="motion">Notice of Motion &amp; Supporting Motion</option>
+                  <option value="declaration">Sworn Declaration Under Penalty of Perjury</option>
+                  <option value="service">Proof / Certificate of Service</option>
+                  <option value="probate">Probate Petition Intake &amp; Asset Summary</option>
+                  <option value="bankruptcy">Bankruptcy Ch. 7 / 13 Filing Prep Worksheet</option>
+                </select>
+              </div>
+              <div class="field"><label for="companionForm">Companion official form # (optional)</label><input id="companionForm" placeholder="e.g. Pro Se 1, PLD-C-001, DE-111, B 101"></div>
+            </div>
+            <div class="grid3">
+              <div class="field"><label for="courtName">Court name</label><input id="courtName"></div>
+              <div class="field"><label for="countyDistrict">County or Federal District</label><input id="countyDistrict"></div>
+              <div class="field"><label for="caseNumber">Case number</label><input id="caseNumber"></div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="plaintiffs">Plaintiff(s) / Petitioner(s)</label><input id="plaintiffs" placeholder="Full legal name(s)"></div>
+              <div class="field"><label for="defendants">Defendant(s) / Respondent(s)</label><input id="defendants" placeholder="Full legal name(s) or business entity"></div>
+            </div>
+            <div class="field"><label for="docTitle">Custom filing title (optional — overrides default heading)</label><input id="docTitle" placeholder="e.g. PLAINTIFF'S COMPLAINT FOR BREACH OF CONTRACT AND DAMAGES"></div>
+          </div>
+
+          <div class="panel">
+            <h2>2 · Self-Represented (Pro Se) Filer Block</h2>
+            <div class="grid2">
+              <div class="field"><label for="filerName">Your full legal name</label><input id="filerName" placeholder="Full legal name"></div>
+              <div class="field"><label for="partyRole">Your party capacity</label><input id="partyRole"></div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="filerAddress">Mailing / service address</label><input id="filerAddress" placeholder="Street, City, State ZIP"></div>
+              <div class="field"><label for="filerPhoneEmail">Phone &amp; email</label><input id="filerPhoneEmail" placeholder="(555) 000-0000 · email@domain.com"></div>
+            </div>
+            <div class="field"><label for="jurisdictionBasis">Jurisdiction, venue &amp; standing statement (optional)</label><textarea id="jurisdictionBasis" placeholder="State why this court has authority over the parties and subject matter (e.g., incident occurred in this county, contract signed here, or federal statute/diversity)."></textarea></div>
+          </div>
+
+          <div class="panel">
+            <h2>3 · Numbered Allegations, Facts or Responses</h2>
+            <p class="small muted" id="tplHint"></p>
+            <div class="field"><label for="paraText">Paragraph statement</label><textarea id="paraText" placeholder="Write one clear, verifiable fact or response per numbered paragraph."></textarea></div>
+            <div class="grid2">
+              <div class="field"><label for="paraExhibit">Referenced Exhibit / Bates ID (optional)</label><input id="paraExhibit" placeholder="e.g. Exhibit 1 / CFL-00001"></div>
+              <div class="field" style="align-content:end"><button type="button" class="btn primary" id="addParaBtn" style="width:100%">Add Numbered Paragraph</button></div>
+            </div>
+            <div id="paraList" class="list" style="margin-top:12px"></div>
+          </div>
+
+          <div class="panel">
+            <h2>4 · Relief Requested &amp; Signature Block</h2>
+            <p class="small muted" id="reliefHint"></p>
+            <div class="field"><label for="reliefRequested">Prayer for relief / specific order requested</label><textarea id="reliefRequested" placeholder="State exact dollar damages, court costs, order, or letters requested."></textarea></div>
+            <div class="grid2">
+              <div class="field"><label for="signingDate">Execution date</label><input id="signingDate" type="date"></div>
+              <div class="field"><label for="signingCityState">City &amp; State signed</label><input id="signingCityState" placeholder="e.g. Fresno, California"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side">
+          <div class="panel">
+            <h3>Live Court-Captioned Preview</h3>
+            <div id="pleadingPreview" class="court-paper"></div>
+          </div>
+          <div class="panel">
+            <h3>FRCP 5.2 Privacy &amp; Filing Notice</h3>
+            <div class="notice">Never put full Social Security numbers, full birth dates, minor full names, or complete account numbers in public court filings. Always pair this draft with required official cover forms from the <a href="../../forms/index.html" style="color:#fff;text-decoration:underline">Court Forms Database</a>.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom:12px">
+            <div class="logo" aria-hidden="true">CF</div>
+            <div>
+              <span class="brand-title">Clear Fault Legal</span>
+              <span class="brand-sub">Pro Se Litigation Tools &amp; Court Forms</span>
+            </div>
+          </div>
+          <p style="margin:0;max-width:36ch">Everything a self-represented litigant needs to pull verified official court forms, draft court-captioned pleadings and demand letters, organize Bates-stamped exhibits, and build 2D/3D scene visuals—privately in the browser.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pro Se Filing Tracks</h4>
+          <ul>
+            <li><a href="../../forms/index.html">Official Court Forms Database</a></li>
+            <li><a href="../../filing/civil-lawsuit.html">File a Civil Lawsuit Pro Se</a></li>
+            <li><a href="../../filing/demand-letters.html">Draft a Settlement Demand Letter</a></li>
+            <li><a href="../../filing/probate.html">File Probate Pro Se</a></li>
+            <li><a href="../../filing/bankruptcy.html">File Chapter 7 / 13 Bankruptcy</a></li>
+            <li><a href="../../filing/small-claims.html">File Small Claims Court</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>7 Interactive Tools</h4>
+          <ul>
+            <li><a href="../../tools/pleading-drafter/index.html">Pro Se Pleading &amp; Motion Drafter</a></li>
+            <li><a href="../../tools/demand-package/index.html">Demand Package Assembler</a></li>
+            <li><a href="../../studio/index.html">2D Incident Reconstruction Studio</a></li>
+            <li><a href="../../tools/3d-scene-stager/index.html">Simple 3D Animation Studio</a></li>
+            <li><a href="../../tools/document-indexer/index.html">Document &amp; Bates Indexer</a></li>
+            <li><a href="../../tools/chronology-builder/index.html">Case Chronology</a> · <a href="../../tools/case-strategy-planner/index.html">Proof Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Official Judiciary Portals</h4>
+          <ul>
+            <li><a href="https://www.uscourts.gov/forms-rules/forms" target="_blank" rel="noopener noreferrer">U.S. Courts National Forms &nearr;</a></li>
+            <li><a href="https://www.uscourts.gov/forms/bankruptcy-forms" target="_blank" rel="noopener noreferrer">U.S. Bankruptcy Forms &nearr;</a></li>
+            <li><a href="https://courts.ca.gov/forms-rules/court-forms" target="_blank" rel="noopener noreferrer">California Judicial Council Forms &nearr;</a></li>
+            <li><a href="../../faq/index.html">Pro Se FAQ</a> · <a href="../../sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Clear Fault Legal. Self-service pro se litigation tools &amp; official court form directory — not a law firm and not legal advice.</span>
+        <span>All uploaded case files and draft filings remain strictly inside local browser memory until exported.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../../assets/js/site.js" defer></script>
+  <script src="../../assets/js/export-gate.js" defer></script>
+  <script src="../../assets/js/pleading.js" defer></script>
+</body>
+</html>

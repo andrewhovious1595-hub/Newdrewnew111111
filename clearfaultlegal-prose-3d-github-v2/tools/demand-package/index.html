@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Demand Package Assembler | Clear Fault Legal</title>
+  <meta name="description" content="Build a formal settlement demand letter with live itemized damages calculation, deadlines, and enclosure checklists.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://clearfaultlegal.com/tools/demand-package/index.html">
+  <meta property="og:site_name" content="Clear Fault Legal">
+  <meta property="og:title" content="Demand Package Assembler | Clear Fault Legal">
+  <meta property="og:description" content="Build a formal settlement demand letter with live itemized damages calculation, deadlines, and enclosure checklists.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clearfaultlegal.com/tools/demand-package/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Demand Package Assembler | Clear Fault Legal">
+  <meta name="twitter:description" content="Build a formal settlement demand letter with live itemized damages calculation, deadlines, and enclosure checklists.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../../assets/css/studio.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Demand Package Assembler",
+  "url": "https://clearfaultlegal.com/tools/demand-package/index.html",
+  "operatingSystem": "Web Browser"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="urgent-bar"><strong>Going Pro Se?</strong> Access verified Federal &amp; State court forms plus 7 browser-based drafting &amp; exhibit tools — zero account walls, zero cloud uploads. <a href="../../forms/index.html">Open Court Forms Database &rarr;</a></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">
+        <div class="logo" aria-hidden="true">CF</div>
+        <div>
+          <span class="brand-title">Clear Fault Legal</span>
+          <span class="brand-sub">Pro Se Litigation Arsenal · Official Court Forms & Drafting Tools</span>
+        </div>
+      </a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primaryNav">Menu</button>
+      <nav id="primaryNav" class="site-nav" data-site-nav aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../forms/index.html">Court Forms DB</a>
+        <a href="../../tools/index.html" aria-current="page">7 Pro Se Tools</a>
+        <a href="../../filing/civil-lawsuit.html">Civil Suits</a>
+        <a href="../../filing/probate.html">Probate</a>
+        <a href="../../filing/bankruptcy.html">Bankruptcy</a>
+        <a href="../../faq/index.html">FAQ</a>
+        <a class="nav-cta" href="../../tools/pleading-drafter/index.html">Start Drafting Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="studio-toolbar">
+      <div class="studio-toolbar-inner">
+        <div class="studio-title-bar">
+          <h1>Demand Package Assembler</h1>
+          <span class="status-pill">Pro Se Arsenal Tool · Settlement &amp; Damages Builder</span>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="btn" id="newDemandBtn">New</button>
+          <button type="button" class="btn" id="openDemandBtn">Open JSON</button>
+          <button type="button" class="btn" id="exportDemandCsv">Damages CSV</button>
+          <button type="button" class="btn" id="exportDemandTxt">Download TXT</button>
+          <button type="button" class="btn" id="exportDemandJson">Save JSON</button>
+          <button type="button" class="btn primary" id="printDemandBtn">Print / PDF Letter</button>
+          <input type="file" id="openDemandFile" accept=".json,application/json" class="hidden">
+        </div>
+      </div>
+    </div>
+
+    <div class="app">
+      <nav class="tool-strip" aria-label="Switch Pro Se litigation tool"><a href="../../forms/index.html">Court Forms DB</a><a href="../../tools/pleading-drafter/index.html">1 · Pleading Drafter</a><a href="../../tools/demand-package/index.html" aria-current="page">2 · Demand Package</a><a href="../../studio/index.html">3 · 2D Scene Studio</a><a href="../../tools/3d-scene-stager/index.html">4 · 3D Animation Studio</a><a href="../../tools/document-indexer/index.html">5 · Bates Indexer</a><a href="../../tools/chronology-builder/index.html">6 · Chronology</a><a href="../../tools/case-strategy-planner/index.html">7 · Proof Planner</a></nav>
+
+      <div class="kpi-grid" role="region" aria-label="Live demand calculation totals">
+        <div class="kpi-card"><span>Documented Special Damages</span><strong id="kpiSpecial">$0.00</strong></div>
+        <div class="kpi-card"><span>Additional / Non-Economic</span><strong id="kpiGeneral">$0.00</strong></div>
+        <div class="kpi-card"><span>Total Demand Amount</span><strong id="kpiTotal">$0.00</strong></div>
+        <div class="kpi-card"><span>Listed Enclosures</span><strong id="kpiEnclosures">0</strong></div>
+      </div>
+
+      <div class="workspace">
+        <section>
+          <div class="panel">
+            <h2>1 · Parties &amp; Claim Header</h2>
+            <div class="grid2">
+              <div class="field"><label for="date">Letter date</label><input id="date" type="date"></div>
+              <div class="field"><label for="representation">Representation posture</label>
+                <select id="representation">
+                  <option>Self-Represented (Pro Se)</option>
+                  <option>Prepared for Attorney Review</option>
+                  <option>Represented Party / Counsel</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="claimantName">Claimant / sender name</label><input id="claimantName" placeholder="Full name or entity"></div>
+              <div class="field"><label for="claimantContact">Sender address / email / phone</label><input id="claimantContact" placeholder="Mailing address, email, phone"></div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="recipientName">Recipient (adjuster / opposing party / counsel)</label><input id="recipientName" placeholder="Name or Claims Department"></div>
+              <div class="field"><label for="recipientOrg">Insurance carrier or organization</label><input id="recipientOrg" placeholder="Company name &amp; address"></div>
+            </div>
+            <div class="grid3">
+              <div class="field"><label for="claimNumber">Claim / policy / matter #</label><input id="claimNumber" placeholder="Optional"></div>
+              <div class="field"><label for="incidentDate">Incident / breach date</label><input id="incidentDate" type="date"></div>
+              <div class="field"><label for="responseDays">Response window (days)</label><input id="responseDays" type="number" min="1" value="30"></div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="subjectLine">Subject / RE line</label><input id="subjectLine" placeholder="e.g. Settlement Demand — Intersection Collision / Contract Breach"></div>
+              <div class="field"><label for="incidentLocation">Incident location / jurisdiction</label><input id="incidentLocation" placeholder="City, State"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>2 · Facts &amp; Basis of Liability</h2>
+            <div class="field"><label for="factsSummary">Factual overview</label><textarea id="factsSummary" placeholder="Summarize what occurred concisely using documented dates, locations, and verifiable records."></textarea></div>
+            <div class="field"><label for="liabilityBasis">Responsibility / liability summary</label><textarea id="liabilityBasis" placeholder="Explain why the recipient or insured is responsible based on documented evidence, notices, or contract terms."></textarea></div>
+          </div>
+
+          <div class="panel">
+            <h2>3 · Itemized Economic (Special) Damages</h2>
+            <div class="grid2">
+              <div class="field">
+                <label for="dmgCategory">Damage category</label>
+                <select id="dmgCategory">
+                  <option>Medical Bills / Treatment</option>
+                  <option>Property Damage / Repair</option>
+                  <option>Lost Wages / Income</option>
+                  <option>Contract / Unpaid Invoice</option>
+                  <option>Out-of-Pocket Expense</option>
+                  <option>Other Economic Loss</option>
+                </select>
+              </div>
+              <div class="field"><label for="dmgAmount">Amount (USD)</label><input id="dmgAmount" type="number" min="0" step="0.01" placeholder="0.00"></div>
+            </div>
+            <div class="grid2">
+              <div class="field"><label for="dmgDesc">Item description</label><input id="dmgDesc" placeholder="e.g. Emergency Room invoice, vehicle repair estimate"></div>
+              <div class="field"><label for="dmgRef">Supporting exhibit / bill reference</label><input id="dmgRef" placeholder="e.g. Exhibit 3 / CFL-00012"></div>
+            </div>
+            <button type="button" class="btn primary" id="addDamageBtn">Add Damage Line Item</button>
+            <div id="damageList" class="list" style="margin-top:12px"></div>
+
+            <div class="grid2" style="margin-top:16px">
+              <div class="field"><label for="nonEconomicAmount">Additional / non-economic allocation (USD, optional)</label><input id="nonEconomicAmount" type="number" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="field"><label for="nonEconomicNotes">Impact / non-economic narrative (optional)</label><input id="nonEconomicNotes" placeholder="Describe daily impact, disruption, or pain/suffering notes"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>4 · Supporting Enclosures &amp; Exhibits</h2>
+            <div class="grid2">
+              <div class="field"><label for="attLabel">Enclosure / exhibit title</label><input id="attLabel" placeholder="e.g. Incident Scene Diagram (PNG), Medical Billing Summary"></div>
+              <div class="field"><label for="attNotes">Pages / Bates range / notes</label><input id="attNotes" placeholder="e.g. 4 pages · CFL-00001–00004"></div>
+            </div>
+            <button type="button" class="btn primary" id="addAttachBtn">Add Enclosure</button>
+            <div id="attachList" class="list" style="margin-top:12px"></div>
+          </div>
+        </section>
+
+        <aside class="side">
+          <div class="panel">
+            <h3>Live Demand Letter Preview</h3>
+            <div id="demandPreview" class="letter-preview"></div>
+          </div>
+          <div class="panel">
+            <h3>Important Legal Notice</h3>
+            <div class="notice">This Demand Package Assembler formats user-entered information into a structured settlement packet. It does not provide legal advice, evaluate claim value, or calculate statutes of limitations. Consult a licensed attorney before waiving rights or signing any release.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom:12px">
+            <div class="logo" aria-hidden="true">CF</div>
+            <div>
+              <span class="brand-title">Clear Fault Legal</span>
+              <span class="brand-sub">Pro Se Litigation Tools &amp; Court Forms</span>
+            </div>
+          </div>
+          <p style="margin:0;max-width:36ch">Everything a self-represented litigant needs to pull verified official court forms, draft court-captioned pleadings and demand letters, organize Bates-stamped exhibits, and build 2D/3D scene visuals—privately in the browser.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pro Se Filing Tracks</h4>
+          <ul>
+            <li><a href="../../forms/index.html">Official Court Forms Database</a></li>
+            <li><a href="../../filing/civil-lawsuit.html">File a Civil Lawsuit Pro Se</a></li>
+            <li><a href="../../filing/demand-letters.html">Draft a Settlement Demand Letter</a></li>
+            <li><a href="../../filing/probate.html">File Probate Pro Se</a></li>
+            <li><a href="../../filing/bankruptcy.html">File Chapter 7 / 13 Bankruptcy</a></li>
+            <li><a href="../../filing/small-claims.html">File Small Claims Court</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>7 Interactive Tools</h4>
+          <ul>
+            <li><a href="../../tools/pleading-drafter/index.html">Pro Se Pleading &amp; Motion Drafter</a></li>
+            <li><a href="../../tools/demand-package/index.html">Demand Package Assembler</a></li>
+            <li><a href="../../studio/index.html">2D Incident Reconstruction Studio</a></li>
+            <li><a href="../../tools/3d-scene-stager/index.html">Simple 3D Animation Studio</a></li>
+            <li><a href="../../tools/document-indexer/index.html">Document &amp; Bates Indexer</a></li>
+            <li><a href="../../tools/chronology-builder/index.html">Case Chronology</a> · <a href="../../tools/case-strategy-planner/index.html">Proof Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Official Judiciary Portals</h4>
+          <ul>
+            <li><a href="https://www.uscourts.gov/forms-rules/forms" target="_blank" rel="noopener noreferrer">U.S. Courts National Forms &nearr;</a></li>
+            <li><a href="https://www.uscourts.gov/forms/bankruptcy-forms" target="_blank" rel="noopener noreferrer">U.S. Bankruptcy Forms &nearr;</a></li>
+            <li><a href="https://courts.ca.gov/forms-rules/court-forms" target="_blank" rel="noopener noreferrer">California Judicial Council Forms &nearr;</a></li>
+            <li><a href="../../faq/index.html">Pro Se FAQ</a> · <a href="../../sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Clear Fault Legal. Self-service pro se litigation tools &amp; official court form directory — not a law firm and not legal advice.</span>
+        <span>All uploaded case files and draft filings remain strictly inside local browser memory until exported.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../../assets/js/site.js" defer></script>
+  <script src="../../assets/js/export-gate.js" defer></script>
+  <script src="../../assets/js/demand.js" defer></script>
+</body>
+</html>
